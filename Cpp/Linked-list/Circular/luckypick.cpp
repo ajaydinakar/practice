@@ -3,13 +3,13 @@
 //                       Program name:Lucky pick
 //Question: Consider  there  are n criminals(numbered  from  1 to  n)waiting  to  be 
 //judgedin acourt. The  order  to judgethem is decided using the following way:
-//n peoplesit in a circle. The Judgestartscounting fromperson 1 and go in 
-//clockwise directionand skip person 2 and person 3. The fourth personreached 
+//n peoplesit in a circle. The Judge starts counting from person 1 and go in 
+//clockwise directio nand skip person 2 and person 3. The fourth person reached 
 //is pickedand removed from the circle, i.e. a certain number of people are 
-//skipped and the next person is picked.The countingrestarts with person 5 and
+//skipped and the next person is picked.The counting restarts with person 5 and
 //the next fourth person to pickis person 8......Eventually, a single person 
 //remains(this guy will be set free, LOL). 
-//Strategy:Used a circular linked list concept which use create,delete and show function
+//Strategy:Used a circular linked list concept.
 //****************************************************************************
 #include<iostream>
 using namespace std;
@@ -29,7 +29,7 @@ public:
 	void add(int data)
 	{
 		node *temp, *temp1;
-		if (head == NULL)
+		if (head == NULL)    //if no node create first node
 		{
 			temp = new node;
 			temp->criminal_ID = data;
@@ -127,3 +127,31 @@ void main()
 	cout << "the lucky criminal set free is criminal no." << j<<endl;
 
 }
+/* ---Sample output-----------/
+enter number of criminals
+8
+enter number of criminals to skip in each step
+4
+===========================================================
+there are 8 criminals to judge
+there are 4 criminals to skip in each step and every 5th criminal is picked and deleted  from list
+===========================================================
+
+Criminals in the list are positioned  as below
+
+criminal no.1 - criminal no.2 - criminal no.3 - criminal no.4 - criminal no.5 - criminal no.6 - criminal no.7 - criminal no.8
+
+
+list of criminals to be judged in the order that they are picked
+
+criminal no.5 is picked
+criminal no.2 is picked
+criminal no.8 is picked
+criminal no.7 is picked
+criminal no. 1 is picked
+criminal no.4 is picked
+criminal no.6 is picked
+
+
+the lucky criminal set free is criminal no.3
+---------------------------------------------------*/
