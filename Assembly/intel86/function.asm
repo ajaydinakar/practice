@@ -1,22 +1,21 @@
 ;Ajay Dinakar   kandavalli   
-	   .MODEL   small
-     .STACK   100h
-     .DATA
+    .MODEL   small
+    .STACK   100h
+    .DATA
          msg1   DB     'too many ghost voters ',13,10,'$'
-                 
-        msg2   DB     'counting seems to be right ',13,10,'$' 
-     .CODE
-	      rdr PROC    near
-	     mov   ah,1       ;1st digit   1st number 
-		   int   21h
-	     sub al,30h
-       mov cl,10
-		   mul cl           ;mul al x 10
-		   mov bl,al        ;1st digit x 10 stored in bl
-		   mov ah,1   
-		   int 21h
-       sub al,30h		 
-		   add bl,al        ;the number stored in bl
+         msg2   DB     'counting seems to be right ',13,10,'$' 
+    .CODE
+	 rdr PROC    near
+	 mov   ah,1       ;1st digit   1st number 
+         int   21h
+	 sub al,30h
+         mov cl,10
+         mul cl           ;mul al x 10
+         mov bl,al        ;1st digit x 10 stored in bl
+         mov ah,1   
+	 int 21h
+         sub al,30h		 
+         add bl,al        ;the number stored in bl
          RET
     rdr  ENDP
     mdr  PROC near
