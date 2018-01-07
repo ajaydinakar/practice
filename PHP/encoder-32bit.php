@@ -5,8 +5,7 @@
 </head>
 <body style="background-color:rgb(223,227,238)">
 <form style="position:center" >
-<h1><center>Team -1</h1>
-<h1><center>Ajay Dinakar Kandavalli & Nikhil Vangeti</h1>
+<h1><center>Ajay Dinakar Kandavalli</h1>
 <h1 ><center>Base32 Encoder</h1><BR><BR><BR>
 <center>Input <input type="text"  name="x"  id="x"></input><br><br>
 <button type="button"  onclick="encode()" style="width:100px"><center>submit</button><BR><BR><BR>
