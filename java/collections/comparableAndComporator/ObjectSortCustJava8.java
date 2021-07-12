@@ -18,10 +18,7 @@ class ObjectSortCustJava8 {
         Comparator<Student> sortByCollege=Comparator.comparing(Student::getCollege);
         Comparator<Student> sortById=Comparator.comparing(Student::getId);
         //this combines three  comparisions to one
-        Comparator<Student> sortByOrder1=Comparator.comparing(Student::getName).thenComparing(Student::getCollege).thenComparing(Student::getId);
-        //same as above using
         Comparator<Student> sortByOrder=Comparator.comparing(Student::getName).thenComparing(Student::getCollege).thenComparing(Student::getId);
-
         // these are sorting using java8 method reference and previous collections.sort
         Collections.sort(students,sortByName);
         System.out.println("After sorting by Name \n"+students);
@@ -29,7 +26,7 @@ class ObjectSortCustJava8 {
         System.out.println("After sorting by College \n"+students);
         Collections.sort(students,sortById);
         System.out.println("After sorting by Id \n"+students);
-        Collections.sort(students,sortByOrder1);
+        Collections.sort(students,sortByOrder);
         System.out.println("After sorting by combing two name then college \n"+students);
         // these are sorting using java8 list.sort
         students.sort(sortByName);
